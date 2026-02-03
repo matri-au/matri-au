@@ -161,8 +161,23 @@
       font-size:16px;
       line-height:1.4;
     }
-    .project a{ border-bottom:1px solid transparent; }
-    .project a:hover{ color:var(--red); border-bottom-color:currentColor; }
+    .project a{ 
+      display: inline-block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(17,17,17,.10);
+      background: rgba(17,17,17,.02);
+      transition: border-color .15s ease, background .15s ease, transform .15s ease, color .15s ease;
+      border-bottom:1px solid transparent; 
+    }
+    .project a:hover{ 
+      color:var(--red); 
+      border-bottom-color:currentColor; 
+      color: var(--red);
+      border-color: rgba(200,9,9,.30);
+      background: rgba(200,9,9,.04);
+      transform: translateY(-1px);
+    }
     .project span{
       display:block;
       margin-top:6px;
@@ -216,12 +231,12 @@
 
       <div class="two-col">
         <div>
-          <p><strong>Ecology is lived law.</strong> Indigenous and native cultures carry it through custom, restraint, and relationship to land.</p>
+          <p><strong>Ecology is lived law.</strong> Indigenous and native cultures carry it through restraint, custom, and relationship to land.</p>
           <p>Matri treats culture as custody: a duty to preserve what keeps people human.</p>
         </div>
         <div>
-          <p><strong>Vitality is not a mood.</strong> It is a state of regulation: clean inputs, steady rhythm, trained attention.</p>
-          <p>Detox, committed practice, and disciplined simplicity restore “juice” — stamina, clarity, memory, and calm force.</p>
+          <p><strong>Vitality is regulation.</strong> Clean inputs, steady rhythm, trained attention.</p>
+          <p>Detox and committed practice restore stamina, clarity, memory, and calm force.</p>
         </div>
       </div>
     </section>
@@ -241,7 +256,7 @@
           <p>Matri is eco-yoga, culture, and community — without noise, persuasion, or performance.</p>
 
           <p><strong>Common problems</strong>: depleted energy, scattered mind, anxiety, poor memory, lost motivation.</p>
-          <p><strong>The method</strong>: detox and rhythm, breath and focus, committed practice, and service-oriented action.</p>
+          <p class="kicker">The method: detox → rhythm → attention → right action.</p>
 
           <p>Some paths are open to all. Others are kept for those who walk closer, longer, and with care.</p>
         </div>
