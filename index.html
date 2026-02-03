@@ -4,25 +4,219 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matri</title>
-  <meta name="description" content="Matri — a quiet place for ecology, culture, and community." />
+  <meta name="description" content="Matri — ecology, culture, and community." />
+
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; padding: 48px 20px; line-height: 1.5; }
-    .wrap { max-width: 720px; margin: 0 auto; }
-    h1 { font-size: 42px; margin: 0 0 12px; }
-    p { font-size: 18px; margin: 0 0 16px; }
-    a { text-decoration: none; border-bottom: 1px solid currentColor; }
-    .small { font-size: 14px; opacity: 0.8; margin-top: 28px; }
+    :root {
+      --red: #c80909;
+      --ink: #111;
+      --muted: #666;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: #fff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+    }
+
+    header {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 32px;
+      display: grid;
+      gap: 32px;
+    }
+
+    .brand {
+      display: grid;
+      gap: 12px;
+      justify-items: start;
+    }
+
+    .brand img {
+      max-width: 220px;
+      height: auto;
+    }
+
+    .rule {
+      width: 72px;
+      height: 3px;
+      background: var(--red);
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 64px;
+      display: grid;
+      gap: 40px;
+    }
+
+    .portrait {
+      position: relative;
+      max-width: 420px;
+    }
+
+    .portrait img {
+      width: 100%;
+      display: block;
+      transition: opacity 0.6s ease;
+    }
+
+    .portrait .color {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    .portrait:hover .color {
+      opacity: 1;
+    }
+
+    .intro {
+      max-width: 560px;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px 72px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px 40px;
+    }
+
+    .project {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .project span {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (min-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <h1>Matri</h1>
-    <p>A calm digital front gate — ecology, culture, and community.</p>
+
+<header>
+  <div class="brand">
+    <!-- choose ONE logo -->
+    <img src="assets/img/matri-logo-red.svg" alt="Matri logo" />
+    <div class="rule"></div>
+    <div class="tagline">
+      Ecology · culture · community
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="portrait">
+    <!-- black & white base -->
+    <img src="assets/img/matri-portrait-bw.jpg" alt="Matri portrait" />
+    <!-- colour hover -->
+    <img class="color" src="assets/img/matri-portrait-colour.jpg" alt="Matri portrait colour" />
+  </div>
+
+  <div class="intro">
     <p>
-      Contact: <a href="mailto:matri.collective@gmail.com">matri.collective@gmail.com</a><br/>
-      More: <a href="https://ecology.yoga">ecology.yoga</a>
+      Matri is a quiet front gate.
+      A place where ecology, culture, and human dignity meet — without noise, persuasion, or performance.
     </p>
-    <p class="small">© Matri</p>
-  </main>
+    <p>
+      Some paths are open to all.
+      Others are kept for those who walk closer, longer, and with care.
+    </p>
+  </div>
+</section>
+
+<nav>
+  <div class="projects">
+
+    <div class="project">
+      <a href="#">1-on-1</a>
+      <span>Private guidance · by request</span>
+    </div>
+
+    <div class="project">
+      <a href="#">Retreats · Yātrās · Workshops</a>
+      <span>Small groups · place-based</span>
+    </div>
+
+    <div class="project">
+      <a href="#">Books</a>
+      <span>Writing · translations · notes</span>
+    </div>
+
+    <div class="project">
+      <a href="#">Matri Samovar</a>
+      <span>Conversation · listening · tea</span>
+    </div>
+
+    <div class="project">
+      <a href="#">Eco-Yoga Institute</a>
+      <span>Training · study · lineage-aware</span>
+    </div>
+
+    <div class="project">
+      <a href="#">Community Hub</a>
+      <span>Commons · basic membership</span>
+    </div>
+
+    <div class="project">
+      <a href="#">eMag</a>
+      <span>Essays · voices · field notes</span>
+    </div>
+
+  </div>
+</nav>
+
+<footer>
+  <p>
+    Contact: <a href="mailto:matri.collective@gmail.com">matri.collective@gmail.com</a><br />
+    More: <a href="https://ecology.yoga">ecology.yoga</a>
+  </p>
+  <p>© Matri</p>
+</footer>
+
 </body>
 </html>
