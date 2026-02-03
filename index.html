@@ -7,216 +7,299 @@
   <meta name="description" content="Matri — eco-yoga, culture, and community." />
 
   <style>
-    :root {
-      --red: #c80909;
-      --ink: #111;
-      --muted: #666;
-      --max: 1100px;
+    :root{
+      --red:#c80909;
+      --ink:#111;
+      --muted:#666;
+      --rule:rgba(17,17,17,.18);
+      --max:1100px;
+    }
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.55;
+      letter-spacing:.01em;
+    }
+    a{ color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
+    a:hover{ border-bottom-color:currentColor; }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 20px;
     }
 
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--ink);
-      background: #fff;
+    /* THRESHOLD */
+    header{
+      min-height:78vh;
+      display:flex;
+      align-items:center;
+    }
+    .threshold{
+      width:100%;
+      text-align:center;
+      padding:64px 0 28px;
+      display:grid;
+      gap:18px;
+      justify-items:center;
+    }
+    .brand img{
+      max-width:240px;
+      height:auto;
+      display:block;
+    }
+    .rule{
+      width:100%;
+      height:1px;
+      background:var(--rule);
+    }
+    .declaration{
+      margin:0;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--ink);
+      opacity:.92;
+    }
+    .doors{
+      display:flex;
+      gap:26px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:4px;
+    }
+    .doors a{
+      font-size:13px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      padding:6px 2px;
+      border-bottom:1px solid transparent;
+    }
+    .doors a:hover{ color:var(--red); border-bottom-color:currentColor; }
+    .doors a:focus-visible{
+      outline:2px solid var(--red);
+      outline-offset:4px;
+      border-bottom-color:transparent;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid currentColor;
+    /* SECTIONS */
+    section{
+      padding:56px 0;
+      border-top:1px solid var(--rule);
+    }
+    .kicker{
+      margin:0 0 12px;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    h2{
+      margin:0 0 12px;
+      font-size:26px;
+      font-weight:600;
+    }
+    p{ margin:0 0 12px; max-width:72ch; }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+    @media (max-width:860px){
+      header{ min-height:auto; }
+      .two-col{ grid-template-columns:1fr; }
     }
 
-    header {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 48px 20px 32px;
-      display: grid;
-      gap: 32px;
+    /* PORTRAIT (BW -> colour on hover) */
+    .hero{
+      display:grid;
+      gap:40px;
+      align-items:center;
+    }
+    @media (min-width:860px){
+      .hero{ grid-template-columns: 420px 1fr; }
+    }
+    .portrait{
+      position:relative;
+      max-width:420px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(17,17,17,.14);
+    }
+    .portrait img{
+      width:100%;
+      display:block;
+      transition:opacity .6s ease;
+    }
+    .portrait .color{
+      position:absolute;
+      inset:0;
+      opacity:0;
+    }
+    .portrait:hover .color{ opacity:1; }
+
+    /* PROJECTS */
+    nav{ padding-top:0; }
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:28px 40px;
+    }
+    .project{
+      font-size:16px;
+      line-height:1.4;
+    }
+    .project a{
+      border-bottom:1px solid transparent;
+    }
+    .project a:hover{
+      color:var(--red);
+      border-bottom-color:currentColor;
+    }
+    .project span{
+      display:block;
+      margin-top:6px;
+      font-size:14px;
+      color:var(--muted);
     }
 
-    .brand {
-      display: grid;
-      gap: 12px;
-      justify-items: start;
-    }
-
-    .brand img {
-      max-width: 220px;
-      height: auto;
-    }
-
-    .rule {
-      width: 72px;
-      height: 3px;
-      background: var(--red);
-    }
-
-    .tagline {
-      font-size: 18px;
-      color: var(--muted);
-      max-width: 520px;
-    }
-
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 20px 64px;
-      display: grid;
-      gap: 40px;
-    }
-
-    .portrait {
-      position: relative;
-      max-width: 420px;
-    }
-
-    .portrait img {
-      width: 100%;
-      display: block;
-      transition: opacity 0.6s ease;
-    }
-
-    .portrait .color {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-    }
-
-    .portrait:hover .color {
-      opacity: 1;
-    }
-
-    .intro {
-      max-width: 560px;
-      font-size: 19px;
-      line-height: 1.55;
-    }
-
-    nav {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 20px 72px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 28px 40px;
-    }
-
-    .project {
-      font-size: 16px;
-      line-height: 1.4;
-    }
-
-    .project span {
-      display: block;
-      margin-top: 6px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    footer {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 48px 20px 64px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    @media (min-width: 860px) {
-      .hero {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-      }
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--rule);
+      padding:40px 0 64px;
+      color:var(--muted);
+      font-size:14px;
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
 
-<header>
-  <div class="brand">
-    <!-- choose ONE logo -->
-    <img src="assets/img/matri-home-red-logo.svg" alt="Matri logo" />
-    <div class="rule"></div>
-    <div class="tagline">
-      Eco-yoga · culture · community
-    </div>
+    <!-- THRESHOLD -->
+    <header id="top">
+      <div class="threshold">
+        <div class="brand">
+          <img src="assets/img/matri-home-red-logo.svg" alt="Matri logo" />
+        </div>
+
+        <div class="rule" aria-hidden="true"></div>
+
+        <!-- Pick ONE declaration line (keep it short). -->
+        <p class="declaration">HONOUR THE LAW.</p>
+
+        <nav class="doors" aria-label="Primary">
+          <a href="#projects">Projects</a>
+          <a href="#guidance">Guidance</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ORIENTATION (this is your “opening up” of the declaration) -->
+    <section id="orientation">
+      <p class="kicker">Orientation</p>
+      <h2>Tradition, structure, order.</h2>
+
+      <div class="two-col">
+        <div>
+          <p><strong>Cultural custody</strong> means continuity: indigenous and native cultures hold ecology as lived law — not opinion.</p>
+          <p>Matri keeps the thread: practice, responsibility, and a dignified standard.</p>
+        </div>
+        <div>
+          <p><strong>Integral yoga</strong> is the method: a disciplined balance of body, action, understanding, and devotion.</p>
+          <p>Less performance. More steadiness. More vitality.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEWARD + PHOTO (your presence, without turning it into “marketing”) -->
+    <section id="guidance">
+      <p class="kicker">Guidance</p>
+      <div class="hero">
+        <div class="portrait">
+          <img src="assets/img/matri-portrait-bw.jpg" alt="Matri portrait (black and white)" />
+          <img class="color" src="assets/img/matri-portrait-colour.jpg" alt="Matri portrait (colour)" />
+        </div>
+
+        <div>
+          <h2>A calm, corrective force.</h2>
+          <p>Matri is a quiet front gate — eco-yoga, culture, and community — without noise, persuasion, or performance.</p>
+          <p>People arrive distracted, depleted, overwhelmed. The work is orientation: focus, moderation, and a return of “juice”.</p>
+          <p>Some paths are open to all. Others are kept for those who walk closer, longer, and with care.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <p class="kicker">Matri projects</p>
+      <h2>Doors</h2>
+
+      <nav aria-label="Projects">
+        <div class="projects">
+
+          <div class="project">
+            <a href="#contact">1-on-1</a>
+            <span>Private guidance · by request</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Retreats · Yātrās · Workshops</a>
+            <span>Small groups · place-based</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Books</a>
+            <span>Writing · translations · notes</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Matri Samovar</a>
+            <span>Conversation · listening · tea</span>
+          </div>
+
+          <div class="project">
+            <a href="https://ecology.yoga">Eco-Yoga Institute</a>
+            <span>Training · study · lineage-aware</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Community Hub</a>
+            <span>Commons · basic membership</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">eMag</a>
+            <span>Essays · voices · field notes</span>
+          </div>
+
+        </div>
+      </nav>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <p class="kicker">Contact</p>
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:matri.collective@gmail.com">matri.collective@gmail.com</a><br />
+        More: <a href="https://ecology.yoga">ecology.yoga</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        © Matri · Australia · <a href="#top">Top</a>
+      </p>
+    </footer>
+
   </div>
-</header>
-
-<section class="hero">
-  <div class="portrait">
-    <!-- black & white base -->
-    <img src="assets/img/matri-portrait-bw.jpg" alt="Matri portrait" />
-    <!-- colour hover -->
-    <img class="color" src="assets/img/matri-portrait-colour.jpg" alt="Matri portrait colour" />
-  </div>
-
-  <div class="intro">
-    <p>
-      Matri is a quiet front gate.
-      A place where ecology, culture, and human dignity meet — without noise, persuasion, or performance.
-    </p>
-    <p>
-      Some paths are open to all.
-      Others are kept for those who walk closer, longer, and with care.
-    </p>
-  </div>
-</section>
-
-<nav>
-  <div class="projects">
-
-    <div class="project">
-      <a href="#">1-on-1</a>
-      <span>Private guidance · by request</span>
-    </div>
-
-    <div class="project">
-      <a href="#">Retreats · Yātrās · Workshops</a>
-      <span>Small groups · place-based</span>
-    </div>
-
-    <div class="project">
-      <a href="#">Books</a>
-      <span>Writing · translations · notes</span>
-    </div>
-
-    <div class="project">
-      <a href="#">Matri Samovar</a>
-      <span>Conversation · listening · tea</span>
-    </div>
-
-    <div class="project">
-      <a href="#">Eco-Yoga Institute</a>
-      <span>Training · study · lineage-aware</span>
-    </div>
-
-    <div class="project">
-      <a href="#">Community Hub</a>
-      <span>Commons · basic membership</span>
-    </div>
-
-    <div class="project">
-      <a href="#">eMag</a>
-      <span>Essays · voices · field notes</span>
-    </div>
-
-  </div>
-</nav>
-
-<footer>
-  <p>
-    Contact: <a href="mailto:matri.collective@gmail.com">matri.collective@gmail.com</a><br />
-    More: <a href="https://ecology.yoga">ecology.yoga</a>
-  </p>
-  <p>© Matri</p>
-</footer>
-
 </body>
 </html>
