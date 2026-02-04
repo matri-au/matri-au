@@ -14,8 +14,10 @@
       --rule:rgba(17,17,17,.18);
       --max:1100px;
     }
+
     *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
+
     body{
       margin:0;
       font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -24,7 +26,12 @@
       line-height:1.55;
       letter-spacing:.01em;
     }
-    a{ color:inherit; text-decoration:none; border-bottom:1px solid transparent; }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+    }
     a:hover{ border-bottom-color:currentColor; }
 
     .wrap{
@@ -35,35 +42,33 @@
 
     /* THRESHOLD */
     header{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0px 0px 0px; /* ↓ top padding reduced */
-      display: grid;
-      gap: 16px; /* ↓ reduce vertical looseness */
+      padding:0;
+      display:grid;
+      gap:16px;
       align-items:center;
-      outline:2px solid red;
     }
+
     .threshold{
       width:100%;
       text-align:center;
-      padding: 0px 0 0px;
+      padding:0;
       display:grid;
       gap:14px;
       justify-items:center;
-      outline:2px solid blue;
     }
-    .brand { outline: 2px solid magenta; }
+
     .brand img{
       max-width:260px;
       height:auto;
       display:block;
-      outline:2px solid purple; background: rgba(255,0,255,.05)
     }
+
     .rule{
       width:100%;
       height:1px;
       background:var(--rule);
     }
+
     .declaration{
       margin:0;
       font-size:11.5px;
@@ -71,9 +76,10 @@
       text-transform:uppercase;
       color:var(--ink);
       opacity:.92;
-      line-height: 1.7;
-      max-width: 92ch;
+      line-height:1.7;
+      max-width:92ch;
     }
+
     .doors{
       display:flex;
       gap:26px;
@@ -81,14 +87,19 @@
       justify-content:center;
       margin-top:4px;
     }
+
     .doors a{
       font-size:13px;
       letter-spacing:.18em;
       text-transform:uppercase;
       padding:6px 2px;
-      border-bottom:1px solid transparent;
     }
-    .doors a:hover{ color:var(--red); border-bottom-color:currentColor; }
+
+    .doors a:hover{
+      color:var(--red);
+      border-bottom-color:currentColor;
+    }
+
     .doors a:focus-visible{
       outline:2px solid var(--red);
       outline-offset:4px;
@@ -100,6 +111,7 @@
       padding:56px 0;
       border-top:1px solid var(--rule);
     }
+
     .kicker{
       margin:0 0 12px;
       font-size:12px;
@@ -107,12 +119,15 @@
       text-transform:uppercase;
       color:var(--muted);
     }
+
     h2{
       margin:0 0 12px;
       font-size:26px;
       font-weight:600;
     }
+
     p{ margin:0 0 12px; max-width:72ch; }
+
     .lead{
       font-size:18px;
       max-width:80ch;
@@ -124,8 +139,8 @@
       gap:28px;
       align-items:start;
     }
+
     @media (max-width:860px){
-      header{ min-height:auto; }
       .two-col{ grid-template-columns:1fr; }
     }
 
@@ -135,57 +150,65 @@
       gap:40px;
       align-items:center;
     }
+
     @media (min-width:860px){
-      .hero{ grid-template-columns: 420px 1fr; }
+      .hero{ grid-template-columns:420px 1fr; }
     }
+
     .portrait{
       position:relative;
       max-width:420px;
       border-radius:16px;
-      box-shadow: 0 16px 50px rgba(0,0,0,.06);
+      box-shadow:0 16px 50px rgba(0,0,0,.06);
       overflow:hidden;
       border:1px solid rgba(17,17,17,.14);
     }
+
     .portrait img{
       width:100%;
       display:block;
       transition:opacity .45s ease;
     }
+
     .portrait .color{
       position:absolute;
       inset:0;
       opacity:0;
     }
+
     .portrait:hover .color{ opacity:1; }
 
     /* PROJECTS */
     nav{ padding-top:0; }
+
     .projects{
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
       gap:28px 40px;
     }
+
     .project{
       font-size:16px;
       line-height:1.4;
     }
-    .project a{ 
-      display: inline-block;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(17,17,17,.10);
-      background: rgba(17,17,17,.02);
-      transition: border-color .15s ease, background .15s ease, transform .15s ease, color .15s ease;
-      border-bottom:1px solid transparent; 
+
+    .project a{
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(17,17,17,.10);
+      background:rgba(17,17,17,.02);
+      transition:border-color .15s ease, background .15s ease, transform .15s ease, color .15s ease;
     }
-    .project a:hover{ 
-      color:var(--red); 
-      border-bottom-color:currentColor; 
-      color: var(--red);
-      border-color: rgba(200,9,9,.30);
-      background: rgba(200,9,9,.04);
-      transform: translateY(-1px);
+
+    .project a:hover{
+      color:var(--red);
+      border-bottom-color:currentColor;
+      border-color:rgba(200,9,9,.30);
+      background:rgba(200,9,9,.04);
+      transform:translateY(-1px);
     }
+
     .project span{
       display:block;
       margin-top:6px;
@@ -199,7 +222,7 @@
       padding:40px 0 64px;
       color:var(--muted);
       font-size:13px;
-      opacity: .9;
+      opacity:.9;
     }
   </style>
 </head>
@@ -207,7 +230,6 @@
 <body>
   <div class="wrap">
 
-    <!-- THRESHOLD -->
     <header id="top">
       <div class="threshold">
         <div class="brand">
@@ -217,7 +239,7 @@
         <div class="rule" aria-hidden="true"></div>
 
         <p class="declaration">
-          HONOURABLE BEINGS HONOUR THE LAW - TRADITION, STRUCTURE, ORDER
+          HONOURABLE BEINGS HONOUR THE LAW — TRADITION · STRUCTURE · ORDER
         </p>
 
         <nav class="doors" aria-label="Primary">
@@ -228,7 +250,6 @@
       </div>
     </header>
 
-    <!-- ORIENTATION -->
     <section id="orientation">
       <p class="kicker">Orientation</p>
       <h2>This is a corrective field.</h2>
@@ -250,7 +271,6 @@
       </div>
     </section>
 
-    <!-- GUIDANCE + PHOTO -->
     <section id="guidance">
       <p class="kicker">Guidance</p>
 
@@ -272,7 +292,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <p class="kicker">Matri projects</p>
       <h2>Doors</h2>
@@ -319,7 +338,6 @@
       </nav>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
       <p class="kicker">Contact</p>
       <h2>Contact</h2>
