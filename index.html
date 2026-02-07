@@ -464,35 +464,6 @@
     </footer>
 
   </div>
-
-  <script>
-  (() => {
-    const btn = document.querySelector("#lineage .acc");
-    const panel = document.querySelector("#lineage .panel");
-    const chev = btn?.querySelector(".chev");
-
-    if (!btn || !panel) return;
-
-    const setState = (open) => {
-      btn.setAttribute("aria-expanded", String(open));
-      panel.hidden = !open;
-      if (chev) chev.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
-    };
-
-    // default closed
-    setState(false);
-
-    btn.addEventListener("click", () => {
-      const open = btn.getAttribute("aria-expanded") === "true";
-      setState(!open);
-    });
-
-    // optional: close with Escape when focus is inside panel
-    panel.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") setState(false);
-    });
-  })();
-</script>
   
 </body>
 </html>
