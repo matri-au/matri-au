@@ -283,6 +283,70 @@
       color:var(--muted);
     }
 
+/* ACCORDION (Lineage) */
+#lineage{ padding:56px 0; border-top:0;} /* keep your section rhythm */
+
+.acc{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+
+  padding:14px 16px;
+  border:1px solid rgba(17,17,17,.14);
+  border-radius:14px;
+  background:rgba(17,17,17,.02);
+  cursor:pointer;
+
+  font:inherit;
+  color:var(--ink);
+  letter-spacing:.02em;
+}
+
+.acc:hover{
+  border-color:rgba(200,9,9,.28);
+  background:rgba(200,9,9,.03);
+}
+
+.acc:focus-visible{
+  outline:2px solid var(--red);
+  outline-offset:4px;
+}
+
+.chev{
+  transition:transform .18s ease;
+  color:var(--muted);
+}
+
+.panel{
+  margin-top:12px;
+  padding:16px 16px 10px;
+  border-left:2px solid rgba(17,17,17,.12);
+}
+
+.panel h4{
+  margin:16px 0 8px;
+  font-size:13px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.panel ul{
+  margin:0 0 12px 18px;
+  padding:0;
+}
+
+.panel li{ margin:6px 0; }
+
+.note{
+  margin-top:14px;
+  font-size:13px;
+  color:var(--muted);
+}
+    
     /* FOOTER */
     footer{
       border-top:1px solid var(--rule);
@@ -473,5 +537,35 @@
     </footer>
 
   </div>
+
+  <script>
+  (() => {
+    const btn = document.querySelector("#lineage .acc");
+    const panel = document.querySelector("#lineage .panel");
+    const chev = btn?.querySelector(".chev");
+
+    if (!btn || !panel) return;
+
+    const setState = (open) => {
+      btn.setAttribute("aria-expanded", String(open));
+      panel.hidden = !open;
+      if (chev) chev.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+    };
+
+    // default closed
+    setState(false);
+
+    btn.addEventListener("click", () => {
+      const open = btn.getAttribute("aria-expanded") === "true";
+      setState(!open);
+    });
+
+    // optional: close with Escape when focus is inside panel
+    panel.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setState(false);
+    });
+  })();
+</script>
+  
 </body>
 </html>
