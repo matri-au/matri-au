@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Matri — Raja Yoga & Meditation</title>
-  <meta name="description" content="Raja yoga instruction. Training attention as sacred custody. Fierce and motherly soft presence." />
+  <title>Matri — Raja Yoga & Meditation Instruction (Australia)</title>
+  <meta name="description" content="Raja yoga and meditation instruction. Training in attention, discipline, vitality and stress resilience." />
   <link rel="canonical" href="https://matri.au/" />
 
   <!-- Robots -->
@@ -14,20 +14,22 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Matri — Raja Yoga">
-  <meta property="og:description" content="Training attention as sacred custody. Fierce and motherly soft presence.">
+  <meta property="og:title" content="Matri">
+  <meta property="og:description" content="Raja yoga and meditation instruction. Training in attention, discipline, vitality and stress resilience.">
   <meta property="og:image" content="https://matri.au/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Matri — Raja Yoga. Tradition · Structure · Order." />
   <meta property="og:url" content="https://matri.au/">
   <meta property="og:site_name" content="Matri">
   <meta property="og:locale" content="en_AU">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Matri — Raja Yoga" />
-  <meta name="twitter:description" content="Training attention as sacred custody. Fierce and motherly soft presence." />
-  <meta name="twitter:image" content="https://matri.au/og-image.png">
+  <meta name="twitter:title" content="Matri — Raja Yoga & Meditation Instruction (Australia)" />
+  <meta name="twitter:description" content="Raja yoga and meditation instruction. Training in attention, discipline, vitality and stress resilience." />
+  <meta name="twitter:image" content="https://matri.au/og-image.png" />
+  <meta name="twitter:image:alt" content="Matri — Raja Yoga. Tradition · Structure · Order.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -47,7 +49,7 @@
     "@type":"Organization",
     "name":"Matri",
     "url":"https://matri.au/",
-    "description":"Raja yoga instruction. Training attention as sacred custody. Fierce and motherly soft presence.",
+    "description":"Raja yoga and meditation instruction. Training in attention, discipline, vitality and stress resilience.",
     "email":"mailto:matri.collective@gmail.com",
     "areaServed":"Australia",
     "sameAs":["https://ecology.yoga/"]
@@ -58,9 +60,9 @@
     :root{
       --red:#c80909;
       --ink:#111;
-      --muted:#555;
-      --rule:rgba(17,17,17,.12);
-      --max:800px;
+      --muted:#666;
+      --rule:rgba(17,17,17,.18);
+      --max:1100px;
     }
 
     *{ box-sizing:border-box; }
@@ -77,181 +79,228 @@
 
     body{
       margin:0;
-      font-family:Georgia, Cambria, "Times New Roman", serif;
+      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--ink);
       background:#fff;
-      line-height:1.65;
+      line-height:1.55;
       letter-spacing:.01em;
-      padding:60px 0 80px;
     }
 
     a{
       color:inherit;
       text-decoration:none;
       border-bottom:1px solid transparent;
-      transition:border-color .15s ease;
     }
     a:hover{ border-bottom-color:currentColor; }
 
     .wrap{
       max-width:var(--max);
       margin:0 auto;
-      padding:0 24px;
+      padding:0 20px;
     }
 
-    /* BRAND */
-    .brand{
+    /* THRESHOLD */
+    header{
+      padding:0;
+      display:grid;
+      gap:16px;
+      align-items:center;
+    }
+
+    .threshold{
+      width:100%;
       text-align:center;
-      margin-bottom:48px;
+      padding:0;
+      display:grid;
+      gap:14px;
+      justify-items:center;
     }
 
     .brand img{
-      max-width:320px;
+      max-width:370px;
       height:auto;
       display:block;
-      margin:0 auto;
     }
 
     .rule{
       width:100%;
       height:1px;
       background:var(--rule);
-      margin:40px auto;
+    }
+
+    .declaration{
+      margin:0;
+      font-size:13px;
+      letter-spacing: .24em;
+      font-weight: 500;
+      text-transform:uppercase;
+      color:var(--ink);
+      opacity:.95;
+      line-height:1.7;
+      max-width:92ch;
+    }
+
+    .doors{
+      display:flex;
+      gap:26px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:4px;
+    }
+
+    .doors a{
+      font-size:12px;
+      letter-spacing:.20em;
+      text-transform:uppercase;
+      padding:6px 2px;
+    }
+
+    .doors a:hover{
+      color:var(--red);
+      border-bottom-color:currentColor;
+    }
+
+    .doors a:focus-visible{
+      outline:2px solid var(--red);
+      outline-offset:4px;
+      border-bottom-color:transparent;
     }
 
     /* SECTIONS */
     section{
-      margin-bottom:64px;
-    }
-
-    .kicker{
-      margin:0 0 16px;
-      font-size:12px;
-      letter-spacing:.24em;
-      text-transform:uppercase;
-      color:var(--muted);
-      font-weight:500;
-    }
-
-    h1{
-      margin:0 0 24px;
-      font-size:28px;
-      font-weight:400;
-      letter-spacing:-.01em;
-      line-height:1.4;
-      max-width:72ch;
-    }
-
-    p{ 
-      margin:0 0 18px; 
-      max-width:72ch;
-      font-size:17px;
-      line-height:1.68;
-    }
-
-    p.lead{
-      font-size:19px;
-      margin-bottom:28px;
-    }
-
-    p.pause{
-      margin:32px 0;
-      font-style:italic;
-      color:var(--muted);
-      text-align:center;
-      font-size:18px;
-    }
-
-    p.stanza{
-      margin:24px 0;
-    }
-
-    /* LINEAGE */
-    .lineage-text{
-      max-width:68ch;
-      margin-bottom:28px;
-    }
-
-    .lineage-list{
-      margin:0 0 0 20px;
-      padding:0;
-      font-size:16px;
-      line-height:1.7;
-    }
-
-    .lineage-list li{
-      margin:8px 0;
-    }
-
-    /* THRESHOLD */
-    .threshold{
-      margin-top:40px;
-      padding-top:40px;
+      padding:56px 0;
       border-top:1px solid var(--rule);
     }
 
-    .threshold h2{
-      margin:0 0 16px;
-      font-size:20px;
-      font-weight:400;
-      font-style:italic;
-      max-width:68ch;
-    }
-
-    .threshold p{
+    .kicker{
       margin:0 0 12px;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    h2{
+      margin:0 0 12px;
+      font-size:26px;
+      font-weight:600;
+    }
+
+    p{ margin:0 0 12px; max-width:72ch; }
+
+    .lead{
+      font-size:18px;
+      max-width:80ch;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .four-col{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    @media (max-width:860px){
+      .two-col{ grid-template-columns:1fr; }
+    }
+
+    /* PORTRAIT (BW -> colour on hover) */
+    .hero{
+      display:grid;
+      gap:40px;
+      align-items:center;
+    }
+
+    @media (min-width:860px){
+      .hero{ grid-template-columns:420px 1fr; }
+    }
+
+    .portrait{
+      position:relative;
+      max-width:420px;
+      border-radius:16px;
+      box-shadow:0 16px 50px rgba(0,0,0,.06);
+      overflow:hidden;
+      border:1px solid rgba(17,17,17,.14);
+    }
+
+    .portrait img{
+      width:100%;
+      display:block;
+      transition:opacity .45s ease;
+    }
+
+    .portrait .color{
+      position:absolute;
+      inset:0;
+      opacity:0;
+    }
+
+    .portrait:hover .color{ opacity:1; }
+
+    /* PROJECTS */
+    #projects nav { padding-top: 0; }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:28px 40px;
+    }
+
+    .project{
       font-size:16px;
-      max-width:68ch;
+      line-height:1.4;
     }
 
-    .threshold a{
+    .project a{
       display:inline-block;
-      margin-top:8px;
-      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size:15px;
-      letter-spacing:.08em;
-      font-weight:500;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(17,17,17,.10);
+      background:rgba(17,17,17,.02);
+      transition:border-color .15s ease, background .15s ease, transform .15s ease, color .15s ease;
+    }
+
+    .project a:hover{
       color:var(--red);
+      border-bottom-color:currentColor;
+      border-color:rgba(200,9,9,.30);
+      background:rgba(200,9,9,.04);
+      transform:translateY(-1px);
     }
 
-    .threshold a:hover{
-      color:#a00707;
-    }
-
-    .threshold .community{
-      margin-top:32px;
+    .project span{
+      display:block;
+      margin-top:6px;
       font-size:14px;
       color:var(--muted);
     }
 
-    .threshold .community a{
-      color:var(--ink);
-      border-bottom-color:var(--rule);
-    }
+    /* LINEAGE LIST TIDY */
+#lineage ul{
+  margin:0 0 12px 18px;
+  padding:0;
+}
 
-    .threshold .community a:hover{
-      border-bottom-color:currentColor;
-    }
+#lineage li{
+  margin:6px 0;
+}
 
+    
     /* FOOTER */
     footer{
-      text-align:center;
-      margin-top:60px;
-      padding-top:40px;
       border-top:1px solid var(--rule);
+      padding:40px 0 64px;
       color:var(--muted);
       font-size:13px;
-      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    }
-
-    @media (max-width:640px){
-      body{ padding:40px 0 60px; }
-      .brand img{ max-width:280px; }
-      h1{ font-size:26px; }
-      p{ font-size:16px; }
-      p.lead{ font-size:18px; }
-      p.pause{ font-size:17px; }
-      section{ margin-bottom:52px; }
+      opacity:.9;
     }
   </style>
 </head>
@@ -259,131 +308,168 @@
 <body>
   <div class="wrap">
     <h1 class="sr-only">
-      Matri — Raja yoga instruction. Training attention as sacred custody. Fierce and motherly soft presence.
+      Matri — Raja yoga and meditation instruction. Training in attention, discipline, vitality and stress resilience.
     </h1>
+    <header id="top">
+      <div class="threshold">
+        <div class="brand">
+          <img src="assets/img/matri-home-red-logo-horisontal.svg" alt="Matri — Raja yoga" title="Matri — Raja Yoga" />
+        </div>
 
-    <header>
-      <div class="brand">
-        <img src="assets/img/matri-home-red-logo-horisontal.svg" alt="Matri — Raja yoga" title="Matri — Raja Yoga" />
+        <div class="rule" aria-hidden="true"></div>
+
+        <p class="declaration">
+          HONOURABLE BEINGS HONOUR THE LAW
+        </p>
+
+        <nav class="doors" aria-label="Primary">
+          <a href="#orientation">Orientation</a>
+          <a href="#lineage">Lineage</a>
+          <a href="#guidance">Guidance</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
-
-      <div class="rule" aria-hidden="true"></div>
     </header>
 
-    <!-- INVITATION -->
-    <section id="invitation">
-      <p class="kicker">Invitation</p>
-      <h1>Ecology is lived law.</h1>
-      
+    <section id="orientation">
+      <p class="kicker">Orientation</p>
+      <h2>A corrective field of continuous observation.</h2>
+
       <p class="lead">
-        Not a cause. Not a stance.<br />
-        Restraint practiced. Custom honoured. Land tended.
-      </p>
-
-      <p class="stanza">
-        This work meets you in the pause between breaths—<br />
-        where space expands and time dissolves.
-      </p>
-
-      <p class="pause">
-        Here, softness holds you completely.<br />
-        And fierceness refuses to let you hide.
-      </p>
-
-      <p>
-        You will not be comforted.<br />
-        You will be met.
-      </p>
-    </section>
-
-    <div class="rule" aria-hidden="true"></div>
-
-    <!-- THE WORK -->
-    <section id="the-work">
-      <p class="kicker">The Work</p>
-      <h1>For those feeling:</h1>
-      
-      <p class="lead">
-        scattered &middot; depleted &middot; compressed by noise &middot; severed from ground
-      </p>
-
-      <h1>The path:</h1>
-      
-      <p class="lead">
-        right effort &rarr; detox &rarr; rhythm &rarr; trained attention &rarr; right action
-      </p>
-
-      <p>
-        Hatha for the body.<br />
-        Karma for the will.<br />
-        Jñāna for clarity.<br />
-        Bhakti for the heart.
-      </p>
-
-      <p>
-        A whole system.<br />
-        Not observed. Walked.
-      </p>
-    </section>
-
-    <div class="rule" aria-hidden="true"></div>
-
-    <!-- LINEAGE -->
-    <section id="lineage">
-      <p class="kicker">Lineage</p>
-      <h1>The lineage moves through silence.</h1>
-      
-      <p class="lineage-text">
-        Himalayan roots. Unbroken thread.<br />
-        Not performers. Practitioners.
-      </p>
-
-      <p class="lineage-text">
-        I do not teach from myself.<br />
-        I hold space for the practice to move through.<br />
-        This is the only way it arrives intact.
+        It does not negotiate with distraction.
+        It returns attention to the body, to the breath, to right action — and to consequences.
       </p>
 
       <div class="two-col">
         <div>
-          <p><strong>Śrī Vidyā & Siddha Transmission</strong></p>
-          <ul class="lineage-list">
-            <li>Śrī Satyasangananda Saraswati, disciple of Paramahamsa Satyananda Saraswati</li>
-            <li>Śrī V Ravi (Śrī Ānandānandanātha), disciple of Śrī Satyajītānandanātha (Desikachariyar)</li>
-            <li>Śrī Nikhileshwaranand (Dr. Narayan Dutt Shrimali), disciple of Swami Sachchidanand of Siddhāśrama (Gyangunj)</li>
-          </ul>
+          <p><strong>Ecology is lived law.</strong> Indigenous and native cultures carry it through restraint, custom, and relationship to land.</p>
+          <p>Matri treats culture as custody: a duty to preserve what keeps people human.</p>
         </div>
-        
         <div>
-          <p><strong>Śāstra</strong></p> 
-          <ul class="lineage-list">
-            <li>Śrī Vidyā (Kādi)</li>
-            <li>Nātha–Siddha traditions (North & South)</li>
-            <li>Vedas & Upaniṣads</li>
-            <li>Advaita Vedānta</li>
-            <li>Śaiva–Śākta Tantra</li>
-            <li>Sāṃkhya</li>
-          </ul>
-        </div>    
+          <p><strong>Vitality is regulation.</strong> Clean inputs, steady rhythm, trained attention.</p>
+          <p>Detox and committed practice restore stamina, clarity, memory, and calm force.</p>
+        </div>
       </div>
+      
     </section>
 
-    <div class="rule" aria-hidden="true"></div>
+<section id="lineage">
+      <p class="kicker">Lineage</p>
+        <div>
+          <p><Streams of study and practice (dikṣā, upāsanā, śāstra). <em>Note:</em> These references are offered with respect and restraint.</p>
+        </div>
+        <div class="two-col">
 
-    <!-- THRESHOLD -->
-    <section class="threshold" id="begin">
-      <h2>Begin only if you are ready</h2>
-      <p>to train attention as a living responsibility.</p>
-      
-      <a href="mailto:matri.collective@gmail.com">matri.collective@gmail.com</a>
-      
-      <p class="community">
-        Community continues at <a href="https://ecology.yoga">ecology.yoga</a>
+          <div>
+              <p><strong>Śrī Vidyā & Siddha Transmission</strong></strong></p>
+            <ul>
+                <li>Śrī Satyasangananda Saraswati, disciple of Paramahamsa Satyananda Saraswati</li>
+                <li>Śrī V Ravi (Śrī Ānandānandanātha), disciple of Śrī Satyajītānandanātha (Desikachariyar)</li>
+                <li>Śrī Nikhileshwaranand (Dr. Narayan Dutt Shrimali), disciple of Swami Sachchidanand of Siddhāśrama (Gyangunj)</li>
+            </ul>
+            </div>
+          
+          <div>
+              <p><strong>Śāstra</strong></strong></p> 
+                <ul>
+                  <li>Śrī Vidyā (Kādi)</li>
+                  <li>Nātha–Siddha traditions (North & South)</li>
+                  <li>Vedas & Upaniṣads</li>
+                  <li>Advaita Vedānta</li>
+                  <li>Śaiva–Śākta Tantra</li>
+                  <li>Sāṃkhya</li>
+                </ul>
+            </div>    
+          
+        </div>
+    </section>
+
+
+    
+   
+
+    <section id="guidance">
+      <p class="kicker">Guidance</p>
+
+      <div class="hero">
+        <div class="portrait">
+          <img src="assets/img/matri-portrait-bw.jpg" alt="Matri portrait (black and white)" />
+          <img class="color" src="assets/img/matri-portrait-colour.jpg" alt="Matri portrait (colour)" />
+        </div>
+
+        <div>
+          <h2>MATRI Raja Yoga is a self-sufficient integral system.</h2>
+          <p>It promotes eco-yoga culture, and empowers community — improving lives without noise and pressures.</p>
+
+          <p><strong>Common problems</strong>: depleted energy, scattered mind, anxiety, poor memory, lost motivation.</p>
+          <p class="kicker">Solution method: right effort → detox → rhythm → attention → right action.</p>
+          <p class="kicker">Work-frame: Hatha · Karma · Jnana  · Bhakti Yogas.</p>
+          <p class="kicker">The MATRI Raja Yoga goal: a bridge between the Western ecology & Eastern indigenous "head-heart-hands" (HHH) timeless self-development frameworks.</p>
+          <p>This path is open for all who who walk the walk, and commit.</p>
+          
+        </div>
+    </section>
+
+    <section id="projects">
+      <p class="kicker">Projects</p>
+
+      <nav aria-label="Projects">
+        <div class="projects">
+
+          <div class="project">
+            <a href="#contact">1-on-1</a>
+            <span>private guidance by request</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Puja on request</a>
+            <span>home · land · retreat</span>
+          </div>
+          
+          <div class="project">
+            <a href="https://ecology.yoga">Eco-Yoga Institute</a>
+            <span>training · courses</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Community Hub</a>
+            <span>Commons · basic membership</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">eMag</a>
+            <span>Essays · audio/video material</span>
+          </div>
+          
+          <div class="project">
+            <a href="#contact">Retreats · Yātrās · Workshops</a>
+            <span>small groups, limited spaces</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Books</a>
+            <span>writing · translations · commentaries</span>
+          </div>
+
+          <div class="project">
+            <a href="#contact">Shop</a>
+            <span>yoga literature · goods</span>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section id="contact">
+      <p class="kicker">Contact</p>
+      <p>
+        Email: <a href="mailto:matri.collective@gmail.com">matri.collective@gmail.com</a><br />
+        More: <a href="https://ecology.yoga">ecology.yoga</a>
       </p>
     </section>
 
     <footer>
-      <p>Matri © Australia</p>
+      <p>Matri © Australia · <a href="#top">Top</a></p>
     </footer>
 
   </div>
