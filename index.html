@@ -186,6 +186,28 @@ header{
 .brand img{
   max-width:370px;
 }
+    
+.brand img{
+  max-width:370px;
+  display:block;
+}
+
+.logo-wrap{
+  position:relative;
+  display:inline-block;
+  border-bottom:none !important;
+}
+
+.logo-hover{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity .25s ease;
+}
+
+.logo-wrap:hover .logo-hover{
+  opacity:1;
+}
 
 .brand a{
   border-bottom:none !important;
@@ -193,9 +215,7 @@ header{
 
 .brand a:hover{
   border-bottom:none !important;
-  color:inherit;
 }
-
 .doors{
   display:flex;
   justify-content:center;
@@ -338,8 +358,18 @@ footer{
     </h1>
     <header>
       <div class="brand">
-           <a href="https://matri.au/"><img src="assets/img/matri-home-red-logo-horisontal.svg" alt="Matri — Raja Yoga in Human Ecology" title="Matri — Raja Yoga in Human Ecology" /></a>
-      </div>
+           <a href="https://matri.au/" class="logo-wrap">
+              <img src="assets/img/matri-home-black-logo-horisontal_370x100.svg"
+                   class="logo-default"
+                   alt="Matri — Raja Yoga in Human Ecology" title="Matri — Raja Yoga in Human Ecology" />
+
+              <img src="assets/img/matri-home-red-logo-horisontal.svg"
+                   class="logo-hover"
+                   alt="" />
+            </a>
+          </div>
+             
+            
 
         <nav class="doors">
           <a href="#orientation">Orientation</a>
