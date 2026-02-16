@@ -67,7 +67,19 @@
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-
+    
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+    
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -107,8 +119,19 @@ p{
   font-size:12px;
   text-transform:uppercase;
   letter-spacing:.22em;
-  margin-bottom:16px;
+  margin-bottom:20px;
+  position:relative;
+  padding-bottom:18px;
 }
+  .kicker::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100vw;
+  height:1px;
+  background:var(--rule);
+}  
 
 .declaration{
   font-size:13px;
@@ -116,6 +139,7 @@ p{
   letter-spacing:.24em;
   line-height:1.7;
   color:var(--ink);
+  max-width:none; 
 }
 
 /* --- Links --- */
@@ -142,11 +166,6 @@ header{
   max-width:370px;
 }
 
-.rule{
-  height:1px;
-  background:var(--rule);
-  margin:20px 0;
-}
 
 .doors{
   display:flex;
@@ -168,9 +187,6 @@ section{
   padding:80px 0;
 }
 
-section + section{
-  border-top:1px solid var(--rule);
-}
 
 /* --- Layout helpers --- */
 
@@ -191,7 +207,7 @@ section + section{
 .hero{
   display:grid;
   gap:50px;
-  align-items:center;
+  align-items:start;
 }
 
 @media (min-width:860px){
@@ -256,6 +272,11 @@ section + section{
   font-size:14px;
   margin-top:6px;
 }
+   
+.full p,
+.full h2{
+  max-width:none;
+}
 
 /* --- Footer --- */
 
@@ -277,8 +298,6 @@ footer{
       <div class="brand">
           <img src="assets/img/matri-home-red-logo-horisontal.svg" alt="Matri — Raja Yoga in Human Ecology" title="Matri — Raja Yoga in Human Ecology" />
       </div>
-
-        <div class="rule"></div>
 
         <nav class="doors">
           <a href="#lineage">About</a>
@@ -342,11 +361,13 @@ footer{
 <p>Restored physiology restores clarity, memory and stamina. Restored clarity restores right action.</p>
         </div>
       </div>
+       <div class="full">
         <h2>Everything is bound by the cycle of transmutation.</h2> 
                 <p class="lead"> Raja Yoga produces positive transformation building a solid foundation.</p>
                 <p class="declaration">Discipline -> Order -> Space -> Clarity -> Relaxation -> Force</p>
                 <p class="lead">Alignment is not belief. It is measurable coherence between thought, action, and environment.</p>
-    </section>
+       </div>   
+ </section>
     
  <section id="projects">
       <p class="kicker">Practice</p> 
