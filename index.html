@@ -110,6 +110,7 @@ h3{
   text-transform:uppercase;
   letter-spacing:.02em;
   margin:8 0 8px;
+  font-weight:400;
   color:var(--ink);
 }
     
@@ -224,6 +225,20 @@ section{
   gap:30px;
 }
 
+.two-col ul{
+  margin:0;
+  padding-left:18px;
+}
+
+.two-col li{
+  margin:0 0 12px;      /* vertical separation */
+  line-height:1.6;      /* softer rhythm */
+}
+
+.two-col li:last-child{
+  margin-bottom:0;
+}
+    
 @media (max-width:860px){
   .two-col{
     grid-template-columns:1fr;
