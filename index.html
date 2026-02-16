@@ -230,14 +230,7 @@
       overflow:hidden;
       border:1px solid rgba(17,17,17,.14);
     }
-    .hero-line{
-      font-size:18px;
-      max-width:60ch;
-      line-height:1.5;
-      letter-spacing:.02em;
-      font-weight:400;
-      margin-top:8px;
-    }
+    
     .portrait img{
       width:100%;
       display:block;
@@ -253,12 +246,14 @@
     .portrait:hover .color{ opacity:1; }
 
     /* PROJECTS */
-    #projects nav { padding-top: 0; }
+    #projects nav { 
+      padding-top: 0;
+      justify-content:center;
+    }
 
     .projects{
       display:grid;
       grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-      justify-content:center;
       gap:28px 40px;
     }
 
